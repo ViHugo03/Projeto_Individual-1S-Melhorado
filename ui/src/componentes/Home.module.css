@@ -1,0 +1,107 @@
+.fundo {
+    background-image: url("https://st2.depositphotos.com/2333525/8183/v/450/depositphotos_81832796-stock-illustration-gold-music-notes-on-a.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 84vh;
+    color: white;
+    display: flex;
+    /* background-color: #00ff6a; */
+    padding: 0;
+    margin: 0;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 60vw;
+    margin: auto;
+}
+
+.slogan {
+    border-radius: 10px;
+    background-color: rgba(90, 83, 83, 0.493);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 190px;
+    width: 390px;
+    font-size: 30px;
+    border: 1px solid white;
+    margin-left: 20px;
+    margin-top: 40px;
+    padding: 8px;
+}
+
+
+.boxes {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    height: 50%;
+}
+
+.box img {
+    background-size: cover;
+    width: 170px;
+    height: 200px;
+}
+
+.box {
+    margin: 50px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box {
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.descricao{
+   width: 100%;
+   height: auto;
+   display: flex;
+   flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .descricao h4{
+    text-align: center;
+    font-family: 'Courier New';
+    font-size: 40px;
+    margin: 70px;
+  }
+  
+  .descricao p{
+    text-align: justify; 
+    font-family:Arial;
+    font-size: 20px;
+  }
+  
+  .descricao a{
+    color: rgb(0, 153, 255);
+    
+  }
+  .descricao a:hover{
+    cursor: pointer;  
+    text-shadow: 0 0 20px white;
+    color: rgba(255, 0, 0, 0.767);
+  }
+  
+  .descricao span{
+    color: rgb(0, 153, 255)
+  }

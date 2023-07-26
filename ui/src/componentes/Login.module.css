@@ -1,0 +1,73 @@
+.fundo {
+    background-image: url("https://st2.depositphotos.com/2333525/8183/v/450/depositphotos_81832796-stock-illustration-gold-music-notes-on-a.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 22.8rem;
+    color: white;
+    padding: 100px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.login {
+    border-radius: 30px;
+    background-color: rgba(90, 83, 83, 0.900);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 380px;
+    width: 400px;
+    margin: auto;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.botao_logar {
+    font-family: "Barlow", sans-serif;
+    border: 0;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 15px;
+    color: white;
+    background-color: #40b7c9ba;
+    width: 120px;
+    align-self: center;
+    margin-top: 5px;
+}
+
+.dados {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    margin-top: 9px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 3px;
+    background-color: transparent;
+    font-family: "Montserrat";
+    font-size: 22px;
+    border: 1px solid black;
+    color: white;
+    width: 250px;
+    border: none;
+    border-radius: 0px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    outline: none;
+}
+
+input::placeholder {
+    color: white;
+}

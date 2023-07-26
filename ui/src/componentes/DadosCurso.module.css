@@ -1,0 +1,69 @@
+.curso {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    border-right: 2px solid rgb(255, 255, 255);
+    justify-content: space-around;
+  }
+  
+.curso h3{
+  margin-left: 20px;
+}
+
+.dia h3{
+  margin-left: 4px;
+}
+
+.dia {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    border-left: 2px solid rgb(255, 255, 255);
+    justify-content: space-around;
+  }
+  
+  .dadosCurso{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 60%;
+    margin: auto;
+    }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+    height: 80%;
+  }
+
+  .ipt_curso {
+    margin-bottom: 1.5vh;
+    display: flex;
+    gap: 0.5rem ;
+    width: 100%;
+  }
+
+  .ipt_dia {
+    margin-bottom: 1.5vh;
+    display: flex;
+    gap: 0.5rem ;
+    width: 100%;
+  }
+
+  .ipt_curso input {
+    width: 10%;
+    height: 60%;
+    margin-left: 20px;
+  }
+
+  .ipt_dia input {
+    margin-left: 43px;
+    width: 10%;
+    height: 60%;
+  }

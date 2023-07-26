@@ -1,0 +1,43 @@
+.ipt {
+    margin-bottom: 10px;
+    padding: 3px;
+    background-color: transparent;
+    font-family: "Montserrat";
+    font-size: 22px;
+    border: 1px solid black;
+    color: white;
+    width: 320px;
+    border: none;
+    border-radius: 0px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    outline: none;
+}
+
+.ipt::placeholder {
+    font-size: 3vh;
+    padding-left: 1vh;
+    color: white;
+    font-family: "Montserrat";
+}
+
+.titulo{
+    display: flex;
+    margin: 0;
+}
+
+.dados {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: space-around;
+}
+
+.dadosPessoais {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    height: 95%;
+    width: 85%;
+}
