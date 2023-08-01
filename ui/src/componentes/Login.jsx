@@ -7,6 +7,7 @@ function Login(props) {
     const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
+    const [error, setError] = useState(""); // Novo estado para armazenar o erro
 
     const location = useLocation();
 
@@ -16,75 +17,6 @@ function Login(props) {
     };
     console.log(body);
 
-    // function entrar() {
-    //     aguardar();
-
-    //     var emailVar = email_input.value;
-    //     var senhaVar = senha_input.value;
-
-    //     if (emailVar == "" || senhaVar == "") {
-    //         cardErro.style.display = "block"
-    //         mensagem_erro.innerHTML = "Todos os Campos devem estar preenchidos";
-    //         finalizarAguardar();
-    //         return false;
-    //     }
-    //     else {
-    //         setInterval(sumirMensagem, 5000)
-    //     }
-
-    //     console.log("FORM LOGIN: ", emailVar);
-    //     console.log("FORM SENHA: ", senhaVar);
-
-    //     fetch("/usuarios/autenticar", {
-    //         method: "POST",
-    //         headers: {
-    //             "Content-Type": "application/json"
-    //         },
-    //         body: JSON.stringify({
-    //             emailServer: emailVar,
-    //             senhaServer: senhaVar
-    //         })
-    //     }).then(function (resposta) {
-    //         console.log("ESTOU NO THEN DO entrar()!")
-    //         console.log(resposta);
-    //         if (resposta.ok) {
-
-
-    //             resposta.json().then(json => {
-    //                 console.log(json.idAluno);
-    //                 console.log(JSON.stringify(json));
-
-    //                 sessionStorage.EMAIL_USUARIO = json.email;
-    //                 sessionStorage.NOME_USUARIO = json.nome;
-    //                 sessionStorage.ID_USUARIO = json.idAluno;
-
-    //                 setTimeout(function () {
-    //                     window.location = "sala.html";
-    //                 }, 1000); // apenas para exibir o loading
-
-    //             });
-
-    //         } else {
-
-    //             console.log("Houve um erro ao tentar realizar o login!");
-
-    //             resposta.text().then(texto => {
-    //                 console.error(texto);
-    //                 finalizarAguardar(texto);
-    //             });
-    //         }
-
-    //     }).catch(function (erro) {
-    //         console.log(erro);
-    //     })
-
-    //     return false;
-    // }
-
-    // function sumirMensagem() {
-    //     cardErro.style.display = "none"
-    // }
-
     function logar() {
         axios.post(`http://localhost:3300/api/login`, body)
             .then((response) => {
@@ -93,12 +25,12 @@ function Login(props) {
                 navigate("/");
             }).catch((error) => {
                 console.log(error);
+                setError("Email ou senha incorretos"); // Atualiza o estado do erro quando a requisição falhar
             });
     }
 
     return (
         <>
-      
             <div className={styles.fundo}>
                 <div className={styles.login}>
                     <h2>Seja Bem Vindo!</h2>
@@ -110,6 +42,7 @@ function Login(props) {
                         <h2>Senha:</h2>
                         <input type="password" defaultValue={location.state?.senha } placeholder="******" onChange={(e) => { setSenha(e.target.value) }} />
                     </div>
+                    {error && <p style={{color: 'red'}}>{error}</p>} {/* Mensagem de erro é exibida aqui */}
                     <button className={styles.botao_logar} onClick={logar}>Logar</button>
                 </div>
             </div>

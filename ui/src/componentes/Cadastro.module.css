@@ -3,7 +3,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 35.3rem;
+    height: 35.1rem;
     color: white;
     display: flex;
     flex-direction: row;
@@ -16,7 +16,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 530px;
+    height: 520px;
     width: 420px;
     margin: auto;
 }
@@ -28,7 +28,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 530px;
+    height: 520px;
     width: 420px;
     margin: auto;
 }
@@ -38,7 +38,7 @@
     background-color: rgba(90, 83, 83, 0.900);
     display: flex;
     flex-direction: column;
-    height: 530px;
+    height: 520px;
     width: 420px;
     margin: auto;
 }

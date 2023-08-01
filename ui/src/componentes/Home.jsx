@@ -69,7 +69,7 @@ function Home() {
                         <br /><br />
                         O preço médio por hora de uma aula de teclado em algumas plataformas digitais chega a custar
                         <span> R$60,00</span> (De acordo com a plataforma <a
-                            href="https://www.superprof.com.br/blog/quanto-cobrar-como-profe-pianista/">SuperProf</a> valor
+                            href="https://www.superprof.com.br/blog/quanto-cobrar-como-profe-pianista/" target="_blank">SuperProf</a> valor
                         referente a aulas ministradas em São Paulo), fazendo um breve calculo acerca da quantidade de horas de
                         estudo que um aluno iniciante necessita, (3 horas semanais no mínimo) multiplicando pelo valor da hora
                         de aula, chegamos a conclusão que em um ano de curso, um aluno pode chegar a ter que investir

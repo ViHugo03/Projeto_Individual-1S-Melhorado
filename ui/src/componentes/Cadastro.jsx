@@ -43,9 +43,15 @@ function Cadastro(props) {
     console.log(requestBody);
 
     function cadastrar() {
-        alert("Cadastrado com sucesso!")
+        for (let key in requestBody) {
+            if (requestBody[key] == "" || requestBody[key] == [] || requestBody[key] == null) {
+                alert("Por favor, preencha todos os campos.");
+                return;
+            }
+        }
+
         setTimeout(() => {
-        navigate("/login",{state: {email:email,senha:senha}});
+            navigate("/login", { state: { email: email, senha: senha } });
         }, 1000);
     }
 
