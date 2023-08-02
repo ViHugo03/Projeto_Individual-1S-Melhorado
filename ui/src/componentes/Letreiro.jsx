@@ -8,11 +8,11 @@ function Letreiro() {
         <>
             <div className={styles.letreiro} onClick={() => {navigate("/cadastro")}}>
                 <div className={styles.slide}>
-                        <h4> Venha fazer parte da Keyboard e torne-se um musico independente!!!</h4>
-                        <h4> Venha fazer parte da Keyboard e torne-se um musico independente!!!</h4>
-                        <h4> Venha fazer parte da Keyboard e torne-se um musico independente!!!</h4>
-                        <h4> Venha fazer parte da Keyboard e torne-se um musico independente!!!</h4>
-                        <h4> Venha fazer parte da Keyboard e torne-se um musico independente!!!</h4>
+                        <h4> Venha fazer parte da Cadence e torne-se um musico independente!!!</h4>
+                        <h4> Venha fazer parte da Cadence e torne-se um musico independente!!!</h4>
+                        <h4> Venha fazer parte da Cadence e torne-se um musico independente!!!</h4>
+                        <h4> Venha fazer parte da Cadence e torne-se um musico independente!!!</h4>
+                        <h4> Venha fazer parte da Cadence e torne-se um musico independente!!!</h4>
                 </div>
             </div>
         </>

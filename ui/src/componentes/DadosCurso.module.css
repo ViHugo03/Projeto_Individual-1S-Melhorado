@@ -3,33 +3,22 @@
     flex-direction: column;
     width: 50%;
     height: 100%;
-    border-right: 2px solid rgb(255, 255, 255);
     justify-content: space-around;
+    background-color: red;
   }
   
 .curso h3{
   margin-left: 20px;
-}
-
-.dia h3{
-  margin-left: 4px;
-}
-
-.dia {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    height: 100%;
-    align-items: center;
-    border-left: 2px solid rgb(255, 255, 255);
-    justify-content: space-around;
-  }
   
+}
+
   .dadosCurso{
     display: flex;
     flex-direction: row;
     width: 100%;
+    justify-content: center;
     height: 60%;
+    background-color: blue;
     margin: auto;
     }
 

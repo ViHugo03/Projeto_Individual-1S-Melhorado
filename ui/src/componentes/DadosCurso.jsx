@@ -4,14 +4,6 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function DadosCurso(props) {
-    const dias = [
-        { id: 1, nome: "Segunda" },
-        { id: 2, nome: "Terça" },
-        { id: 3, nome: "Quarta" },
-        { id: 4, nome: "Quinta" },
-        { id: 5, nome: "Sexta" },
-        { id: 6, nome: "Sábado" }
-    ];
     const cursos = [
         { id: 1, nome: "Teclado/Piano" },
         { id: 2, nome: "Violão" },
@@ -31,17 +23,6 @@ function DadosCurso(props) {
         props.setCurso(vetorNovo);
     }
 
-    function adicionaDia(diaInserir) {
-        const vetorNovo = [...props.diaAula];
-        const index = vetorNovo.indexOf(diaInserir.id);
-        if (index !== -1) {
-            vetorNovo.splice(index, 1);
-        } else {
-            vetorNovo.push(diaInserir.id);
-        }
-        props.setDiaAula(vetorNovo);
-    }
-
     return (
         <div className={styles.container}>
             <h3>Dados Curso:</h3>
@@ -58,21 +39,6 @@ function DadosCurso(props) {
                                 value={curso.nome}
                             />
                             <b>{curso.nome}</b>
-                        </div>
-                    ))}
-                </div>
-                <div className={styles.dia}>
-                    <h3>Dia da aula:</h3>
-                    {dias.map((dia, index) => (
-                        <div key={index} className={styles.ipt_dia}>
-                            <input
-                                onClick={() => {
-                                    adicionaDia(dia);
-                                }}
-                                type="checkbox"
-                                value={dia.nome}
-                            />
-                            <b>{dia.nome}</b>
                         </div>
                     ))}
                 </div>

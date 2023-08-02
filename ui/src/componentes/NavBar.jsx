@@ -10,7 +10,7 @@ function NavBar() {
         <>
             <div className={styles.header}>
                 <div className={styles.container}>
-                    <h1 className={styles.titulo}>Keyboard</h1>
+                    <h1 className={styles.titulo}>Cadence</h1>
 
                     {isNav ?
                         <ul className={styles.navbar}>

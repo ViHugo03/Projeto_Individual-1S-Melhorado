@@ -18,7 +18,7 @@ function Login(props) {
     console.log(body);
 
     function logar() {
-        axios.post(`http://localhost:3300/api/login`, body)
+        axios.post(`http://localhost:3300/usuario/login`, body)
             .then((response) => {
                 console.log(response.data);
                 alert("logado com sucesso");

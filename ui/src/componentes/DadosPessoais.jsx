@@ -67,7 +67,6 @@ function DadosPessoais(props) {
     return (
         <>
             <div className={styles.dadosPessoais}>
-                <h3> Dados Pessoais:</h3>
                 <div className={styles.dados}>
                     <h3>Nome:</h3>
                     <input

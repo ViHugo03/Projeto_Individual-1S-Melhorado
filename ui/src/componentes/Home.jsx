@@ -77,11 +77,11 @@ function Home() {
                         de <span> R$200,00</span> ao mês, um valor que muitas vezes é alto dependendo da situação financeira da
                         pessoa.
                         <br /><br />
-                        A <b>Keyboard</b> foi criada para ajudar você aluno a não desistir do seu sonho de ser musico, com aulas de conteúdo exclusivo,
+                        A <b>Cadence</b> foi criada para ajudar você aluno a não desistir do seu sonho de ser musico, com aulas de conteúdo exclusivo,
                         imagens demonstrativas, videos explicativos mostrando o passo a passo de como fazer as tarefas e atividades de fixação de conteúdo,
                         para poder proporcionar o melhor ambiente de aprendizado há você.
                         <br /><br />
-                        As aulas ministradas pela Keyboard são totalmente gratuitas, então não se preocupe, cadastre-se e inicie seu curso agora mesmo.
+                        As aulas ministradas pela Cadence são totalmente gratuitas, então não se preocupe, cadastre-se e inicie seu curso agora mesmo.
                         <br /><br />
                         <b>Clique em  <a onClick={() => { navigate("/cadastro") }}>Cadastre-se</a> e não perca mais tempo e venha ser nosso aluno!</b>
                     </p>
