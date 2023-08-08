@@ -3,7 +3,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 34.9rem;
+    height: 90.3vh;
     color: white;
     display: flex;
     flex-direction: row;
@@ -18,18 +18,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 520px;
-    width: 420px;
-    margin: auto;
-}
-
-.dadosCurso {
-    border-radius: 30px;
-    background-color: rgba(90, 83, 83, 0.900);
-    display: flex;
-    flex-direction: column;
-    height: 520px;
-    width: 420px;
+    height: 80vh;
+    width: 30vw;
     margin: auto;
 }
 
@@ -39,10 +29,11 @@
     border-radius: 5px;
     font-weight: 600;
     font-size: 18px;
-    padding: 10px 15px;
+    align-items: center;
     color: white;
     background-color: #40b7c9ba;
-    width: 120px;
+    width: 10vw;
+    height: 6vh;
     align-self: center;
     margin-bottom: 10px;
 }

@@ -79,7 +79,8 @@
     justify-content: center;
   }
   
-  .descricao h4{
+  .descricao h3{
+    color: #000;
     text-align: center;
     font-family: 'Courier New';
     font-size: 40px;
@@ -98,10 +99,12 @@
   }
   .descricao a:hover{
     cursor: pointer;  
-    text-shadow: 0 0 20px white;
-    color: rgba(255, 0, 0, 0.767);
+    color: rgb(199, 15, 15);
+    text-shadow: 0 0 20px rgb(0, 0, 0);
+    
   }
   
   .descricao span{
     color: rgb(0, 153, 255)
   }
+

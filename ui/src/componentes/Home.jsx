@@ -33,7 +33,7 @@ function Home() {
                     </div>
                 </div>
                 <div className={styles.descricao}>
-                    <h4>Musica</h4>
+                    <h3>Musica</h3>
                     <p>
                         A origem da palavra música é grega. A etimologia está em musiké téchne, que significa a arte das musas,
                         divindades que cantavam as memórias do passado. A técnica da música consiste em arranjar sons em uma
@@ -60,7 +60,7 @@ function Home() {
                         cria-se uma ponte entre o universo interior e exterior do indivíduo. O que permite ainda uma melhor
                         integração com o contexto social em que este vive.
                     </p>
-                    <h4>Desânimo dos Estudantes</h4>
+                    <h3>Desânimo dos Estudantes</h3>
                     <p>
                         Contudo, Muitas pessoas que querem aprender a tocar algum instrumento musical, tem encontrado
                         dificuldades por conta dos altos custos nos cursos de Teclado/Piano, Violão, Bateria, Baixo, Guitarra

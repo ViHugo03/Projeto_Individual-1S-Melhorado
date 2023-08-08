@@ -1,14 +1,18 @@
 import * as UsuarioRepository from "../repositories/UsuarioRepository.mjs"
+import Usuario from "../models/usuario.mjs";
+import jwt from "jsonwebtoken";
+import bcrypt from "bcrypt";
+import dotenv from "dotenv";
 
-export function listarUsuarios(req, res) {
-    UsuarioRepository.listarUsuarios().then((usuario) => {
-        res.send(usuario);
-    });
+export async function listarUsuarios(res) {
+    const usuarios = await Usuario.findAll()
+    res.send(usuarios);
 }
 
-export function cadastrarUsuario(req, res) {
+export async function cadastrarUsuario(req, res) {
     const usuario = req.body;
-    let emailRegex = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+    let emailRegex = /^.+@.+\..+$/;
+
     if (!usuario.nome) {
         res.status(400).send("O campo nome é obrigatório");
         return;
@@ -29,36 +33,54 @@ export function cadastrarUsuario(req, res) {
         res.status(400).send("A senha deve ter no mínimo 6 caracteres");
         return;
     }
-    if (!usuario.confirmacaoSenha) {
-        res.status(400).send("É necessário confirmar a senha");
-        return;
-    }
-    if (usuario.senha !== usuario.confirmacaoSenha) {
-        res.status(400).send("As senhas não coincidem");
-        return;
-    }
     else {
-        UsuarioRepository.cadastrarUsuario(usuario)
-            .then((usuario) => {
-                res.status(201).send(usuario);
-            });
+        const user = await Usuario.create(usuario);
+        res.status(201).send(user);
     }
 }
 
-export function login(req, res) {
-    const usuario = req.body;
-    if (!usuario.email) {
+export async function login(req, res) {
+    const email = req.body.email;
+    const senha = req.body.senha;
+    let emailRegex = /^.+@.+\..+$/;
+
+    if (!email) {
         res.status(400).send("O campo email é obrigatório");
         return;
     }
-    if (!usuario.senha) {
+    if (!emailRegex.test(email)) {
+        res.status(400).send("O campo email é inválido");
+        return;
+    }
+
+    if (!senha) {
         res.status(400).send("O campo senha é obrigatório");
         return;
     }
-    else {
-        UsuarioRepository.login(usuario)
-            .then((usuario) => {
-                res.status(201).send(usuario);
-            });
+
+    // Buscamos o usuário pelo e-mail
+    const usuario = await UsuarioRepository.login(email);
+
+    if (!usuario) {
+        res.status(401).send("Email não encontrado");
+        return;
     }
+
+    // Comparando as senhas
+    const match = await bcrypt.compare(senha, usuario.senha);
+
+    if (!match) {
+        res.status(401).send("Senha inválida");
+        return;
+    }
+
+    // Gerando o token
+    const token = jwt.sign({id : usuario.id }, process.env.JWT_SECRET, {
+        expiresIn: '1h' // 1 hora
+    });
+
+    // Enviando o token na resposta
+    res.status(200).send({ token: token });
 }
+
+

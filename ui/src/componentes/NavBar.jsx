@@ -14,21 +14,21 @@ function NavBar() {
 
                     {isNav ?
                         <ul className={styles.navbar}>
-                            <li className={uselocation.pathname == "/" && styles.agora}>
+                            <li className={uselocation.pathname == "/" ? styles.agora : undefined}>
                                 <p onClick={() => { navigate("/") }}>Home</p>
                             </li>
                             <li><p>|</p></li>
-                            <li className={uselocation.pathname == "/login" && styles.agora}>
+                            <li className={uselocation.pathname == "/login" ? styles.agora : undefined}>
                                 <p onClick={() => { navigate("/login") }}>Login</p>
                             </li>
                             <li><p>|</p></li>
-                            <li className={uselocation.pathname == "/cadastro" && styles.agora}>
+                            <li className={uselocation.pathname == "/cadastro" ? styles.agora : undefined}>
                                 <p onClick={() => { navigate("/cadastro") }}>Cadastro</p>
                             </li>
                         </ul>
                         :
                         <div className={styles.sair}>
-                            <p>SAIR</p>
+                            <p onClick={(e) => {navigate(-1), sessionStorage.clear()}}>SAIR</p>
                             
                         </div>}
 

@@ -37,11 +37,11 @@ function DadosPessoais(props) {
     const handleSenhaChange = (e) => {
         const newSenha = e.target.value;
         setSenhaTemp(newSenha);
-        if (newSenha.length < 6) {
-            setSenhaError('A senha deve ter mais que 6 caracteres');
+        if (newSenha.length >= 6) {
+            setSenhaError('');
         }
         else {
-            setSenhaError('');
+            setSenhaError('A senha deve ter mais que 6 caracteres');
         }
     };
 
@@ -52,15 +52,13 @@ function DadosPessoais(props) {
             setConfirmacaoSenhaError('As senhas não correspondem');
         } else {
             setConfirmacaoSenhaError('');
-            if (newConfirmacaoSenha === senhaTemp) {
-                props.setSenha(senhaTemp);
-                props.setConfirmacaoSenha(newConfirmacaoSenha);
-            }
+            props.setSenha(senhaTemp);
+            props.setConfirmacaoSenha(newConfirmacaoSenha);
         }
     };
 
     function validateEmail(email) {
-        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        const re = /^.+@.+\..+$/;
         return re.test(String(email).toLowerCase());
     }
 

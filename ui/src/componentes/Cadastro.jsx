@@ -14,8 +14,7 @@ function Cadastro(props) {
     const requestBody = {
         nome: nome,
         email: email,
-        senha: senha,
-        confirmacaoSenha: confirmacaoSenha
+        senha: senha
     };
 
     console.log(requestBody);

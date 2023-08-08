@@ -1,7 +1,5 @@
 .letreiro {
-  /* background-color: #40b7c992; */
   background-image: linear-gradient(to right, #1a237e ,#40b7c992 40%);
-
     height: 6.6vh;
     color: #fff;
     display: flex;
@@ -19,7 +17,7 @@ body{
 
 .slide {
   display: flex;
-  gap: 53rem;
+  gap: 56rem;
   overflow: hidden;
   flex-direction: row;
     animation: textSlide 50s infinite linear;

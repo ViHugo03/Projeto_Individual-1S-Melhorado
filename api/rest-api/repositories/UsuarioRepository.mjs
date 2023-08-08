@@ -1,22 +1,9 @@
 import Usuario from "../models/usuario.mjs";
 
-export function listarUsuarios() {
-    return Usuario.findAll();
-}
-
-export function listarUsuarioPorId(id) {
-    return Usuario.findByPk(id);
-}
-
-export function cadastrarUsuario(usuario) {
-    return Usuario.create(usuario);
-}
-
-export function login(usuario) {
+export function login(email) {
     return Usuario.findOne({
         where: {
-            email: usuario.email,
-            senha: usuario.senha,
+            email: email
         },
     });
 }
