@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import styles from "./Cadastro.module.css";
-import DadosPessoais from "./DadosPessoais"
+import DadosPessoais from "./DadosPessoais";
 import { useLocation, useNavigate } from "react-router-dom";
-import axios from "axios";
+import axiosInstance from "../../config/axiosInstance";
+import bcrypt from "bcryptjs";
 
 function Cadastro(props) {
     const [nome, setNome] = useState("")
@@ -17,16 +18,27 @@ function Cadastro(props) {
         senha: senha
     };
 
+    // const salt = await bcrypt.genSalt();
+    // usuario.senha = await bcrypt.hash(usuario.senha, salt);
+
     console.log(requestBody);
 
     function cadastrar() {
         for (let key in requestBody) {
-            if (requestBody[key] == "" || requestBody[key] == [] || requestBody[key] == null) {
+            if (!requestBody[key]) {
                 alert("Por favor, preencha todos os campos.");
                 return;
             }
         }
-        axios.post("http://localhost:3300/usuario", requestBody)
+
+        const salt = bcrypt.genSaltSync(10);
+        const hashedPassword = bcrypt.hashSync(senha, salt);
+
+        const requestBodyToSend = {
+            ...requestBody,
+            senha: hashedPassword   // Use the hashed password
+        };
+        axiosInstance.post("/usuario", requestBodyToSend)
             .then((response) => {
                 console.log(response.data);
 

@@ -1,14 +1,19 @@
 import axios from 'axios';
 
+const server = {
+    Victor : '26.212.158.49',
+    Trabalho : '26.150.219.242'
+}
+
 const axiosInstance = axios.create({
-    baseURL: 'http://localhost:3000',
+    baseURL: `http://${server.Trabalho}:3000`,
     timeout: 1000,
 });
 
 axiosInstance.interceptors.request.use(
     function (config) {
         // Obter o token do armazenamento local
-        const token = localStorage.getItem('token');
+        const token = sessionStorage.getItem('token');
 
         // Se o token existir, adicione-o ao cabeçalho Authorization
         if (token) {

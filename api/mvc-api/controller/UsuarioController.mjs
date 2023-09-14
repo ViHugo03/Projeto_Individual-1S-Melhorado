@@ -2,7 +2,6 @@ import * as UsuarioRepository from "../repositories/UsuarioRepository.mjs"
 import Usuario from "../models/usuario.mjs";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
-import dotenv from "dotenv";
 
 export async function listarUsuarios(res) {
     const usuarios = await Usuario.findAll()
@@ -82,5 +81,7 @@ export async function login(req, res) {
     // Enviando o token na resposta
     res.status(200).send({ token: token });
 }
+
+
 
 

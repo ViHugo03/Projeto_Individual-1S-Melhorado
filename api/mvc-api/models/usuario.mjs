@@ -19,13 +19,7 @@ const Usuario = connection.define('usuario', {
     }
 }, {
     freezeTableName: true,
-    timestamps: false,
-    hooks: {
-        beforeCreate: async (usuario) => {
-            const salt = await bcrypt.genSalt();
-            usuario.senha = await bcrypt.hash(usuario.senha, salt);
-        }
-    }
+    timestamps: false
 });
 
 export default Usuario;

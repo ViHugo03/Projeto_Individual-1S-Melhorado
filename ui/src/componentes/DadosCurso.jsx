@@ -1,7 +1,6 @@
 import { useState } from "react";
 import styles from "./DadosCurso.module.css";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 
 function DadosCurso(props) {
     const cursos = [

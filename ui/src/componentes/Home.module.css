@@ -1,3 +1,12 @@
+body::-webkit-scrollbar {
+  display: none; 
+}
+
+body {
+  -ms-overflow-style: none;  
+  scrollbar-width: none; 
+}
+
 .fundo {
     background-image: url("https://st2.depositphotos.com/2333525/8183/v/450/depositphotos_81832796-stock-illustration-gold-music-notes-on-a.jpg");
     background-repeat: no-repeat;
